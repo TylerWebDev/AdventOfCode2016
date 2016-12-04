@@ -11,7 +11,11 @@ Please do not commit directly into the `Day<n>` folders, but rather make a folde
 
 ## Running
 
-### Haskell (TODO)
+### Haskell
+> Exercies
+```
+runhaskell Main.hs
+```
 
 ### Elixir
 > tests
