@@ -27,3 +27,9 @@ mix test
 mix advent1.run
 mix advent2.run
 ```
+
+### PowerShell
+> Exercies
+```
+powershell -file Find-BunnyHQ.ps1
+```
