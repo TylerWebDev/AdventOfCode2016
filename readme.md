@@ -14,6 +14,7 @@ Please do not commit directly into the `Day<n>` folders, but rather make a folde
 ### Haskell
 > Exercies
 ```
+cabal install parsec
 runhaskell Main.hs
 ```
 
