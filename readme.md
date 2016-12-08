@@ -12,7 +12,7 @@ Please do not commit directly into the `Day<n>` folders, but rather make a folde
 ## Running
 
 ### CFML
-> Exercies
+> Exercises
 ```
 box puzzle.cfm
 ```
