@@ -11,11 +11,10 @@ Please do not commit directly into the `Day<n>` folders, but rather make a folde
 
 ## Running
 
-### Haskell
-> Exercies
+### CFML
+> Exercises
 ```
-cabal install parsec
-runhaskell Main.hs
+box puzzle.cfm
 ```
 
 ### Elixir
@@ -30,8 +29,15 @@ mix advent1.run
 mix advent2.run
 ```
 
+### Haskell
+> Exercises
+```
+cabal install parsec
+runhaskell Main.hs
+```
+
 ### PowerShell
-> Exercies
+> Exercises
 ```
 powershell -file Find-BunnyHQ.ps1
 ```
