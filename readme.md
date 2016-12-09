@@ -30,14 +30,14 @@ mix advent2.run
 ```
 
 ### Haskell
-> Exercies
+> Exercises
 ```
 cabal install parsec
 runhaskell Main.hs
 ```
 
 ### PowerShell
-> Exercies
+> Exercises
 ```
 powershell -file Find-BunnyHQ.ps1
 ```
