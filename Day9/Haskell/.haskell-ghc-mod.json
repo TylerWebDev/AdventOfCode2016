@@ -1,0 +1,3 @@
+{
+    "ghcOptions": ["-fno-warn-unused-do-bind"]
+}
