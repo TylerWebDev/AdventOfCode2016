@@ -9,6 +9,30 @@ defmodule AdventTest do
     assert (Advent.isABBA?("acba") === false)
     assert (Advent.isABBA?("aaaa") === false)
     assert (Advent.isABBA?("zxcvbn") === false)
+    assert (Advent.isABBA?("cjkxbnylglnlfleelzu") === true)
+  end
+
+  test "can get aba" do
+    assert (Advent.getABA("aabaa") === [{"a", "b", "a"}])
+    assert (Advent.getABA("zazbz") === [{"z", "b", "z"}, {"z", "a", "z"}])
+    assert (Advent.getABA("zaqbz") === [])
+  end
+
+  test "can get get outer and inner" do
+    assert (Advent.getOuterInner(
+      "wysextplwqpvipxdv[srzvtwbfzqtspxnethm]syqbzgtboxxzpwr[kljvjjkjyojzrstfgrw]obdhcczonzvbfby[svotajtpttohxsh]cooktbyumlpxostt"
+    ) === {
+      ["cooktbyumlpxostt", "obdhcczonzvbfby", "syqbzgtboxxzpwr", "wysextplwqpvipxdv"],
+      ["svotajtpttohxsh", "kljvjjkjyojzrstfgrw", "srzvtwbfzqtspxnethm"],
+    })
+  end
+
+  test "can check if supports ssl" do
+    assert (Advent.ssl?("aba[bab]xyz") === true)
+    assert (Advent.ssl?("aaa[kek]eke") === true)
+    assert (Advent.ssl?("zazbz[bzb]cdb") === true)
+    assert (Advent.ssl?("aba[bqb]xyz") === false)
+    assert (Advent.ssl?("xyx[xyx]xyx") === false)
   end
 
   test "can check if supports tls" do
@@ -23,5 +47,9 @@ defmodule AdventTest do
     assert (Advent.tls?("bqooxxweoytjghrqn[hkwwukixothfyglw]kpasnmikmbzcbfi[vlnyszifsaaicagxtqf]ucdyxasusefuuxl") === false)
     assert (Advent.tls?("rxpusykufgqujfe[rypwoorxdemxffui]cvvcufcqmxoxcphp[witynplrfvquduiot]vcysdcsowcxhphp[gctucefriclxaonpwe]jdprpdvpeumrhokrcjt") === true)
     assert (Advent.tls?("iungssgfnnjlgdferc[xfffplonmzjmxkinhl]dehxdielvncdawomqk[teizynepguvtgofr]fjazkxesmlwryphifh[ppjfvfefqhmuqtdp]luopramrehtriilwlo") === true)
+    assert (Advent.tls?("ihekzgbwpjxgbau[eqpvqxncntbtsqn]mbtbcujdkbrhxdu") === false)
+    assert (Advent.tls?("hgtbgxarmgbxqrhghxb[hflfvoetxfisqsj]syhkugztqkywetyhad[fmptjuaqittvvyooda]cjkxbnylglnlfleelzu") === true)
+    assert (Advent.tls?("yhrowrreplrrsbupeor[nchtznfzbzwnogh]rynudxihckzattbz[dshxeaqusdlhydtm]rvqzuffgqtysfzxp") === false)
+    assert (Advent.tls?("unfjgussbjxzlhopoqg[ppdnqkiuooukdmbqlo]flfiieiitmettblfln") === false)
   end
 end

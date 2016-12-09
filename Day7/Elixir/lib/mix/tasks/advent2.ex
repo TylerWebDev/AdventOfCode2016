@@ -4,6 +4,8 @@ defmodule Mix.Tasks.Advent2.Run do
   def run(_) do
     File.read!("input.txt")
       |> String.split("\n")
+      |> Enum.filter(&Advent.ssl?/1)
+      |> Enum.count
       |> IO.inspect
   end
 end
