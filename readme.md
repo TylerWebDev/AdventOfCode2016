@@ -41,3 +41,11 @@ runhaskell Main.hs
 ```
 powershell -file Find-BunnyHQ.ps1
 ```
+
+### .Net Core
+> Exercises
+```
+dotnet restore
+dotnet build
+dotnet run
+```
